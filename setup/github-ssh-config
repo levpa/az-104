@@ -15,6 +15,7 @@ Host github.com
 
 # generate new gpg key for signature verification with your 'Name Surname' and 'name.surname@example.email'
 gpg --default-new-key-algo rsa4096 --gen-key
+
 # print keys
 gpg --list-secret-keys --keyid-format=long
 
@@ -31,4 +32,10 @@ gpg --armor --export xxxxxxxxxxxxxxx
 
 # to sign all commits from your laptop, set:
 git config --global commit.gpgsign true
-# try to commit and push
+
+# try to commit with 'git commit -m "my commit"' use passphrase for sign identity
+# do 'git push', check verify status on commit in GitHub
+
+# add [aliases] block from .gitconfig file to ~/.gitconfig with command: 'git config --global -e'
+# check new functionality:
+git ac " commit and publish new code "
