@@ -41,3 +41,4 @@ git config --global commit.gpgsign true
 git ac " commit and publish new code "
 
 # second way is to setup 1Password automation for auto - signing
+test
