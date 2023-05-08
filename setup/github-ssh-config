@@ -28,4 +28,7 @@ uid                 [ultimate] Lev Pasichnyi <lev.pasichnyi@gmail.com>
 gpg --armor --export xxxxxxxxxxxxxxx
 
 # copy and past printed block to new GitHub GPG key
+
+# to sign all commits from your laptop, set:
+git config --global commit.gpgsign true
 # try to commit and push
