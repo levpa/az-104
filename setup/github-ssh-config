@@ -13,3 +13,19 @@ Host github.com
   git config --global user.email "name.surname@example.com"
   git config --global user.name "Name Surname"
 
+# generate new gpg key for signature verification with your 'Name Surname' and 'name.surname@example.email'
+gpg --default-new-key-algo rsa4096 --gen-key
+# print keys
+gpg --list-secret-keys --keyid-format=long
+
+/c/Users/levpa/.gnupg/pubring.kbx
+---------------------------------
+sec   rsa4096/xxxxxxxxxxxxx 2023-05-08 [SC] [expires: 2025-05-07]
+      YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+uid                 [ultimate] Lev Pasichnyi <lev.pasichnyi@gmail.com>
+
+# sustitute xxxxxxxxxxxxxxxxx part to next command:
+gpg --armor --export xxxxxxxxxxxxxxx
+
+# copy and past printed block to new GitHub GPG key
+# try to commit and push
