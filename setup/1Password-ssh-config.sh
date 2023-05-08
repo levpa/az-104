@@ -38,3 +38,6 @@ Host github.com
 
 8. Check functionality (git auth + git signing with 1Password):
 git add . && git commit -m " git auth and signing with 1Password " && git push
+
+9. possible problems: can't commit, can't push
+ways to resolve: restart 1Password client, remove known_hosts files
