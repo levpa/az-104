@@ -1,0 +1,15 @@
+# create and generate ssh key:
+mkdir ~/.ssh && cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -f <key_filename> -C <your_email@example.com>
+
+# add config to ~/.ssh/config
+Host github.com
+        User levpa
+        Hostname github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/github 
+
+# add your identity to git config
+  git config --global user.email "name.surname@example.com"
+  git config --global user.name "Name Surname"
+
